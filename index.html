@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>পহেলা বৈশাখ ১৪৩৩ - উৎসব রেজিস্ট্রেশন</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  :root {
+    --crimson: #B5192A;
+    --deep-red: #7D0E1A;
+    --gold: #F4C430;
+    --bright-gold: #FFD700;
+    --saffron: #FF8C00;
+    --green: #1E8449;
+    --deep-green: #0E5C2F;
+    --cream: #FFF8E7;
+    --warm-white: #FFFDF5;
+    --dark: #1A0800;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Hind Siliguri', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    background: #7D0E1A;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: -3;
+    background:
+      radial-gradient(ellipse at 15% 10%, rgba(255,215,0,0.18) 0%, transparent 45%),
+      radial-gradient(ellipse at 85% 85%, rgba(30,132,73,0.22) 0%, transparent 45%),
+      radial-gradient(ellipse at 50% 40%, #B5192A 0%, #5C0010 60%, #2A0008 100%);
+  }
+
+  .alpana-bg {
+    position: fixed; inset: 0; z-index: -2; opacity: 0.055;
+    background-image:
+      radial-gradient(circle, var(--gold) 1.5px, transparent 1.5px),
+      radial-gradient(circle, var(--gold) 1px, transparent 1px);
+    background-size: 36px 36px, 18px 18px;
+    background-position: 0 0, 9px 9px;
+    animation: alpanaMove 30s linear infinite;
+  }
+  @keyframes alpanaMove {
+    0%   { background-position: 0 0, 9px 9px; }
+    100% { background-position: 36px 36px, 45px 45px; }
+  }
+
+  .deco-top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50; height: 6px;
+    background: linear-gradient(90deg, var(--deep-green), var(--gold), var(--crimson), var(--gold), var(--deep-green));
+  }
+
+  .floater {
+    position: fixed;
+    animation: floatUp linear infinite;
+    opacity: 0; z-index: 0; pointer-events: none; user-select: none;
+  }
+  @keyframes floatUp {
+    0%   { transform: translateY(-80px) rotate(-5deg); opacity: 0; }
+    8%   { opacity: 0.7; }
+    90%  { opacity: 0.5; }
+    100% { transform: translateY(110vh) rotate(20deg); opacity: 0; }
+  }
+
+  .wrapper {
+    position: relative; z-index: 1;
+    max-width: 700px; margin: 0 auto;
+    padding: 28px 16px 70px;
+  }
+
+  .hero { text-align: center; padding: 36px 16px 24px; }
+
+  .motif-row {
+    display: flex; justify-content: center; align-items: center;
+    gap: 4px; flex-wrap: wrap; margin-bottom: 14px;
+  }
+  .motif-item {
+    font-size: 28px;
+    animation: bounce 2.5s ease-in-out infinite;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4));
+    display: inline-block;
+  }
+  .motif-item:nth-child(1) { animation-delay: 0s; }
+  .motif-item:nth-child(2) { animation-delay: 0.25s; font-size: 22px; }
+  .motif-item:nth-child(3) { animation-delay: 0.5s; font-size: 30px; }
+  .motif-item:nth-child(4) { animation-delay: 0.75s; font-size: 22px; }
+  .motif-item:nth-child(5) { animation-delay: 1s; font-size: 30px; }
+  .motif-item:nth-child(6) { animation-delay: 0.4s; font-size: 22px; }
+  .motif-item:nth-child(7) { animation-delay: 0.8s; font-size: 28px; }
+  @keyframes bounce {
+    0%,100% { transform: translateY(0) rotate(-4deg); }
+    50%      { transform: translateY(-9px) rotate(4deg); }
+  }
+
+  .subheadline {
+    color: var(--gold); font-size: 12px; letter-spacing: 5px;
+    text-transform: uppercase; font-weight: 700; margin-bottom: 10px;
+  }
+
+  .main-title {
+    font-family: 'Noto Serif Bengali', serif;
+    color: var(--bright-gold);
+    font-size: clamp(46px, 13vw, 82px);
+    font-weight: 900; line-height: 1.05;
+    text-shadow:
+      0 0 40px rgba(255,215,0,0.6),
+      4px 4px 0 #6D0010,
+      8px 8px 0 rgba(90,0,14,0.35);
+    animation: glow 3.5s ease-in-out infinite alternate;
+    margin-bottom: 8px;
+  }
+  @keyframes glow {
+    0%   { text-shadow: 0 0 25px rgba(255,215,0,0.5), 4px 4px 0 #6D0010; }
+    100% { text-shadow: 0 0 65px rgba(255,215,0,0.9), 4px 4px 0 #6D0010, 0 0 110px rgba(255,140,0,0.4); }
+  }
+
+  .year-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--bright-gold), var(--saffron));
+    color: var(--deep-red); font-family: 'Noto Serif Bengali', serif;
+    font-size: 19px; font-weight: 900;
+    padding: 6px 24px; border-radius: 40px; margin: 10px 0 16px;
+    box-shadow: 0 6px 24px rgba(255,215,0,0.45), inset 0 1px 0 rgba(255,255,255,0.3);
+  }
+
+  .tagline {
+    color: rgba(255,248,231,0.82); font-size: 15px; line-height: 1.75;
+  }
+
+  .culture-strip {
+    display: flex; justify-content: center; align-items: center;
+    gap: 18px; flex-wrap: wrap;
+    margin: 18px 0; padding: 14px 20px;
+    background: rgba(0,0,0,0.22);
+    border-radius: 60px; border: 1px solid rgba(255,215,0,0.2);
+  }
+  .c-item {
+    display: flex; flex-direction: column; align-items: center; gap: 3px;
+    font-size: 10px; color: rgba(255,248,231,0.6);
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+  .c-item span { font-size: 26px; }
+
+  .divider {
+    display: flex; align-items: center; gap: 12px; margin: 20px 0;
+  }
+  .dline { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .dicon { font-size: 18px; }
+
+  /* BKASH */
+  .bkash-card {
+    background: linear-gradient(135deg, #D4106A 0%, #A0004D 50%, #780038 100%);
+    border-radius: 22px; padding: 22px 24px; margin-bottom: 20px;
+    border: 2px solid rgba(255,255,255,0.18);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+    position: relative; overflow: hidden;
+  }
+  .bkash-card::before {
+    content: '৳';
+    position: absolute; right: -8px; bottom: -24px;
+    font-size: 130px; font-weight: 900;
+    color: rgba(255,255,255,0.04);
+    font-family: 'Noto Serif Bengali', serif; line-height: 1;
+  }
+  .bkash-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .bkash-badge {
+    background: white; color: #D4106A;
+    font-size: 11px; font-weight: 800;
+    padding: 3px 12px; border-radius: 20px;
+    letter-spacing: 2px; text-transform: uppercase;
+    display: inline-block; margin-bottom: 10px;
+  }
+  .bkash-lbl { color: rgba(255,255,255,0.8); font-size: 13px; margin-bottom: 5px; }
+  .bkash-num {
+    color: var(--bright-gold); font-size: 30px; font-weight: 800;
+    letter-spacing: 3px; font-family: 'Courier New', monospace;
+    text-shadow: 0 0 20px rgba(255,215,0,0.5);
+  }
+  .bkash-note { color: rgba(255,255,255,0.6); font-size: 12px; margin-top: 10px; line-height: 1.6; }
+  .copy-btn {
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.35);
+    color: white; padding: 10px 18px; border-radius: 20px;
+    cursor: pointer; font-size: 13px; font-family: 'Hind Siliguri', sans-serif;
+    transition: all 0.2s; white-space: nowrap; flex-shrink: 0;
+  }
+  .copy-btn:hover { background: rgba(255,255,255,0.28); transform: scale(1.04); }
+
+  /* FORM */
+  .form-card {
+    background: var(--warm-white); border-radius: 26px; padding: 32px 28px;
+    box-shadow: 0 24px 70px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,215,0,0.25);
+    border-top: 5px solid var(--gold); position: relative; overflow: hidden;
+  }
+  .form-card::before {
+    content: '🐘';
+    position: absolute; top: 6px; right: 14px;
+    font-size: 72px; opacity: 0.05;
+    transform: rotate(8deg) scaleX(-1);
+  }
+  .form-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--deep-green), var(--gold), var(--crimson));
+  }
+
+  .form-heading {
+    font-family: 'Noto Serif Bengali', serif;
+    color: var(--deep-red); font-size: 24px; font-weight: 800;
+    text-align: center; margin-bottom: 4px;
+  }
+  .form-sub { text-align: center; color: #9A7030; font-size: 13px; margin-bottom: 24px; }
+
+  .sec-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--crimson);
+    border-bottom: 2px solid #F0DDB0; padding-bottom: 6px;
+    margin: 22px 0 14px;
+    display: flex; align-items: center; gap: 6px;
+  }
+
+  .fg { margin-bottom: 16px; }
+  label {
+    display: block; font-size: 14px; font-weight: 600;
+    color: #3D2000; margin-bottom: 5px;
+    font-family: 'Hind Siliguri', sans-serif;
+  }
+  .req { color: var(--crimson); }
+
+  input, select {
+    width: 100%; padding: 12px 16px;
+    border: 2px solid #E5D0A0; border-radius: 12px;
+    font-family: 'Hind Siliguri', sans-serif; font-size: 15px;
+    color: var(--dark); background: #FFFCF4;
+    transition: all 0.25s; outline: none;
+    -webkit-appearance: none; appearance: none;
+  }
+  input:focus, select:focus {
+    border-color: var(--saffron); background: white;
+    box-shadow: 0 0 0 4px rgba(255,140,0,0.12);
+  }
+  input::placeholder { color: #C0A070; }
+
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B5192A' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 14px center;
+    padding-right: 42px; cursor: pointer;
+  }
+
+  .r2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  .fee-box {
+    background: linear-gradient(135deg, #FFF3E0, #FFE8C0);
+    border: 1.5px solid #FFCC80; border-radius: 14px;
+    padding: 14px 16px; margin: 16px 0;
+    font-size: 13px; color: #6B3800;
+    display: flex; align-items: flex-start; gap: 10px; line-height: 1.65;
+  }
+
+  .submit-btn {
+    width: 100%; padding: 17px;
+    background: linear-gradient(135deg, #B5192A 0%, #7D0E1A 100%);
+    color: white; border: none; border-radius: 16px;
+    font-family: 'Noto Serif Bengali', serif; font-size: 19px; font-weight: 800;
+    cursor: pointer; transition: all 0.3s;
+    box-shadow: 0 8px 28px rgba(181,25,42,0.45);
+    position: relative; overflow: hidden; margin-top: 10px;
+  }
+  .submit-btn::before {
+    content: '';
+    position: absolute; top: 0; left: -100%; width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+    transition: left 0.55s;
+  }
+  .submit-btn:hover::before { left: 160%; }
+  .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(181,25,42,0.55); }
+  .submit-btn:active { transform: translateY(0); }
+  .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+  /* COUPON MODAL */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(5,0,0,0.9); z-index: 200;
+    align-items: center; justify-content: center;
+    padding: 20px; backdrop-filter: blur(8px);
+  }
+  .modal-overlay.show { display: flex; }
+
+  .coupon-wrap {
+    max-width: 500px; width: 100%;
+    animation: popIn 0.45s cubic-bezier(0.175,0.885,0.32,1.275);
+  }
+  @keyframes popIn {
+    0% { transform: scale(0.65) translateY(40px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+  }
+
+  #coupon-card {
+    border-radius: 26px; overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+    background: linear-gradient(160deg, #FFF9E8 0%, #FFF0BF 100%);
+    position: relative;
+  }
+  #coupon-card::before {
+    content: '';
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background-image: radial-gradient(circle, rgba(181,25,42,0.07) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+  }
+
+  .c-top {
+    background: linear-gradient(135deg, #B5192A 0%, #7D0E1A 55%, #4A0510 100%);
+    padding: 26px 28px 42px; text-align: center; position: relative; z-index: 1;
+  }
+  .c-top::after {
+    content: '';
+    position: absolute; bottom: -20px; left: 0; right: 0; height: 40px;
+    background: linear-gradient(160deg, #FFF9E8 0%, #FFF0BF 100%);
+    clip-path: ellipse(52% 100% at 50% 100%);
+  }
+  .c-motifs { font-size: 22px; letter-spacing: 6px; margin-bottom: 8px; }
+  .c-title {
+    font-family: 'Noto Serif Bengali', serif;
+    color: var(--bright-gold); font-size: 28px; font-weight: 900;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  }
+  .c-sub { color: rgba(255,248,231,0.75); font-size: 13px; margin-top: 4px; }
+
+  .c-body { padding: 38px 28px 24px; position: relative; z-index: 1; text-align: center; }
+
+  .s-label {
+    font-size: 10px; color: #9A7020;
+    letter-spacing: 4px; text-transform: uppercase; font-weight: 700; margin-bottom: 8px;
+  }
+  .s-num {
+    font-family: 'Courier New', monospace;
+    font-size: 36px; font-weight: 900; color: #B5192A; letter-spacing: 5px;
+    background: white; display: inline-block;
+    padding: 10px 30px; border-radius: 14px;
+    border: 2.5px dashed #D4A843;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1); margin-bottom: 22px;
+  }
+
+  .c-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 12px; text-align: left;
+    border-top: 1.5px dashed #D4A843; padding-top: 18px;
+  }
+  .cgi .ci-lbl {
+    font-size: 9px; color: #9A7020;
+    letter-spacing: 2.5px; text-transform: uppercase; font-weight: 800;
+    display: block; margin-bottom: 3px;
+  }
+  .cgi .ci-val {
+    font-family: 'Noto Serif Bengali', serif;
+    color: #1A0800; font-size: 15px; font-weight: 700;
+  }
+  .cgi-full { grid-column: 1/-1; }
+
+  .c-footer {
+    background: linear-gradient(135deg, #0E5C2F, #1E8449);
+    padding: 14px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    position: relative; z-index: 1;
+  }
+  .cf-txt { color: rgba(255,255,255,0.75); font-size: 11px; line-height: 1.5; }
+  .cf-mot { font-size: 20px; letter-spacing: 2px; }
+
+  .modal-acts { display: flex; gap: 12px; margin-top: 14px; }
+  .modal-acts button {
+    flex: 1; padding: 14px; border-radius: 14px;
+    font-family: 'Hind Siliguri', sans-serif; font-size: 15px; font-weight: 700;
+    cursor: pointer; border: none; transition: all 0.25s;
+  }
+  .btn-dl { background: var(--bright-gold); color: #3D1A00; }
+  .btn-dl:hover { background: #FFC200; transform: translateY(-2px); }
+  .btn-cls { background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.25) !important; }
+  .btn-cls:hover { background: rgba(255,255,255,0.22); }
+
+  /* Success state */
+  .success-banner {
+    background: linear-gradient(135deg, #0E5C2F, #1E8449);
+    border-radius: 16px; padding: 16px 20px; margin-top: 14px;
+    color: white; font-size: 14px; line-height: 1.7;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: none;
+  }
+  .success-banner.show { display: block; }
+
+  .page-footer {
+    text-align: center; margin-top: 32px;
+    color: rgba(255,248,231,0.42); font-size: 12px; line-height: 2;
+  }
+
+  .spinner {
+    display: inline-block; width: 16px; height: 16px;
+    border: 2px solid rgba(255,255,255,0.35); border-top-color: white;
+    border-radius: 50%; animation: spin 0.7s linear infinite;
+    vertical-align: middle; margin-right: 6px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .toast {
+    position: fixed; bottom: 28px; left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #0E5C2F; color: white;
+    padding: 12px 26px; border-radius: 40px;
+    font-size: 14px; font-family: 'Hind Siliguri', sans-serif;
+    z-index: 999; transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35); white-space: nowrap;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  /* Config warning */
+  .config-warn {
+    background: rgba(255,140,0,0.15); border: 1.5px solid rgba(255,140,0,0.4);
+    border-radius: 12px; padding: 12px 16px; margin-bottom: 16px;
+    font-size: 12px; color: #FFD080; line-height: 1.6; display: none;
+  }
+
+  @media (max-width: 500px) {
+    .form-card { padding: 22px 14px; }
+    .r2 { grid-template-columns: 1fr; }
+    .main-title { font-size: 50px; }
+    .s-num { font-size: 26px; letter-spacing: 3px; }
+    .c-body { padding: 30px 16px 18px; }
+    .culture-strip { gap: 10px; }
+    .bkash-inner { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="deco-top"></div>
+<div class="alpana-bg"></div>
+<div id="floaters"></div>
+
+<div class="wrapper">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="motif-row">
+      <span class="motif-item">🐘</span>
+      <span class="motif-item">🌸</span>
+      <span class="motif-item">🐟</span>
+      <span class="motif-item">🪷</span>
+      <span class="motif-item">🐴</span>
+      <span class="motif-item">🌺</span>
+      <span class="motif-item">🥁</span>
+    </div>
+    <div class="subheadline">বাংলা নববর্ষ উৎসব ১৪৩৩</div>
+    <h1 class="main-title">পহেলা বৈশাখ</h1>
+    <div class="year-pill">🗓️ ১৪ এপ্রিল ২০২৬</div>
+    <p class="tagline">
+      এসো হে বৈশাখ, এসো এসো — আনন্দে মাতো সবাই! 🎉<br>
+      ইলিশ মাছে পান্তা ভাত ·
+    </p>
+  </div>
+
+  <!-- Cultural strip -->
+  <div class="culture-strip">
+    <div class="c-item"><span>🐘</span>হাতি</div>
+    <div class="c-item"><span>🐴</span>ঘোড়া</div>
+    <div class="c-item"><span>🐟</span>ইলিশ</div>
+    <div class="c-item"><span>🥁</span>ঢোল</div>
+    <div class="c-item"><span>🌺</span>ফুল</div>
+    <div class="c-item"><span>🎭</span>মুখোশ</div>
+  </div>
+
+  <div class="divider">
+    <div class="dline"></div>
+    <span class="dicon">🌼</span>
+    <div class="dline"></div>
+  </div>
+
+  <!-- BKASH -->
+  <div class="bkash-card">
+    <div class="bkash-inner">
+      <div>
+        <div class="bkash-badge">bKash</div>
+        <div class="bkash-lbl">📲 Send Money করুন এই নম্বরে</div>
+        <div class="bkash-num">01627-457836</div>
+        <div class="bkash-note">
+          ✅ পেমেন্টের পর Transaction ID সংরক্ষণ করুন<br>
+          ✅ নিচের ফর্মে TxID দিয়ে রেজিস্ট্রেশন সম্পন্ন করুন
+        </div>
+      </div>
+      <button class="copy-btn" onclick="copyNum()">📋 কপি</button>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-card">
+    <div class="form-heading">🎟️ রেজিস্ট্রেশন ফর্ম</div>
+    <div class="form-sub">সকল <span style="color:var(--crimson)">*</span> চিহ্নিত তথ্য পূরণ করা আবশ্যক</div>
+
+    <!-- Config Warning (shows if script URL not set) -->
+    <div class="config-warn" id="configWarn">
+      ⚠️ Google Apps Script URL সেট করা নেই। <code>APPS_SCRIPT_URL</code> ভেরিয়েবলটি আপডেট করুন।
+    </div>
+
+    <!-- Personal -->
+    <div class="sec-label">👤 ব্যক্তিগত তথ্য</div>
+
+    <div class="fg">
+      <label>পূর্ণ নাম <span class="req">*</span></label>
+      <input type="text" id="name" placeholder="আপনার পূর্ণ নাম লিখুন">
+    </div>
+    <div class="r2">
+      <div class="fg">
+        <label>মোবাইল নম্বর <span class="req">*</span></label>
+        <input type="tel" id="phone" placeholder="01XXXXXXXXX">
+      </div>
+      <div class="fg">
+        <label>ইমেইল</label>
+        <input type="email" id="email" placeholder="email@example.com">
+      </div>
+    </div>
+
+    <!-- Academic -->
+    <div class="sec-label">📚 শিক্ষা প্রতিষ্ঠানের তথ্য</div>
+
+    <div class="r2">
+      <div class="fg">
+        <label>শ্রেণি / ক্লাস <span class="req">*</span></label>
+        <select id="classname">
+          <option value="">ক্লাস বেছে নিন</option>
+          <optgroup label="— মাধ্যমিক —">
+            <option value="ষষ্ঠ শ্রেণি">ষষ্ঠ শ্রেণি (৬ষ্ঠ)</option>
+            <option value="সপ্তম শ্রেণি">সপ্তম শ্রেণি (৭ম)</option>
+            <option value="অষ্টম শ্রেণি">অষ্টম শ্রেণি (৮ম)</option>
+            <option value="নবম শ্রেণি">নবম শ্রেণি (৯ম)</option>
+            <option value="দশম শ্রেণি">দশম শ্রেণি (১০ম)</option>
+          </optgroup>
+          <optgroup label="— উচ্চ মাধ্যমিক —">
+            <option value="একাদশ শ্রেণি">একাদশ শ্রেণি (HSC-১)</option>
+            <option value="দ্বাদশ শ্রেণি">দ্বাদশ শ্রেণি (HSC-২)</option>
+          </optgroup>
+          <optgroup label="— বিশ্ববিদ্যালয় —">
+            <option value="১ম বর্ষ">১ম বর্ষ</option>
+            <option value="২য় বর্ষ">২য় বর্ষ</option>
+            <option value="৩য় বর্ষ">৩য় বর্ষ</option>
+            <option value="৪র্থ বর্ষ">৪র্থ বর্ষ</option>
+            <option value="মাস্টার্স">মাস্টার্স</option>
+          </optgroup>
+          <option value="শিক্ষক / কর্মকর্তা">শিক্ষক / কর্মকর্তা</option>
+          <option value="অভিভাবক">অভিভাবক</option>
+          <option value="অন্যান্য">অন্যান্য</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>রোল নম্বর <span class="req">*</span></label>
+        <input type="text" id="roll" placeholder="যেমন: ০১, ১৫, ৪২">
+      </div>
+    </div>
+
+    <div class="fg">
+      <label>অংশগ্রহণকারী সংখ্যা <span class="req">*</span></label>
+      <select id="guests">
+        <option value="১ জন">১ জন</option>
+        <option value="২ জন">২ জন</option>
+        <option value="৩ জন">৩ জন</option>
+        <option value="৪ জন">৪ জন</option>
+        <option value="৫+ জন">৫+ জন</option>
+      </select>
+    </div>
+
+    <!-- Payment -->
+    <div class="sec-label">💳 পেমেন্ট তথ্য</div>
+
+    <div class="fg">
+      <label>bKash Transaction ID <span class="req">*</span></label>
+      <input type="text" id="txnid" placeholder="যেমন: 8N7A4B2C1D" style="text-transform:uppercase;">
+    </div>
+
+    <div class="fee-box">
+      <span style="font-size:20px">🐟</span>
+      <span>
+        bKash নম্বর <strong>01627-457836</strong>-তে <strong>Send Money</strong> করুন।
+        পেমেন্ট সফল হলে SMS-এর Transaction ID লিখুন।
+        <em>পান্তা-ইলিশের উৎসবে আপনাকে স্বাগতম! 🐘🐴🌺</em>
+      </span>
+    </div>
+
+    <button class="submit-btn" id="submitBtn" onclick="submitForm()">
+      🎊 রেজিস্ট্রেশন করুন ও কুপন নিন
+    </button>
+
+    <div class="success-banner" id="successBanner">
+      ✅ রেজিস্ট্রেশন সফল হয়েছে! আপনার কুপন তৈরি হয়েছে এবং Google Sheet-এ সংরক্ষিত হয়েছে।
+    </div>
+  </div>
+
+  <div class="page-footer">
+    🐘 হাতি-ঘোড়ার মেলা &nbsp;·&nbsp; 🐟 পান্তা-ইলিশের ভোজ &nbsp;·&nbsp; 🌸 বৈশাখের আনন্দ<br>
+    যোগাযোগ: <strong style="color:rgba(255,215,0,0.75)">01627-457836</strong>
+  </div>
+
+</div>
+
+<!-- COUPON MODAL -->
+<div class="modal-overlay" id="couponModal">
+  <div class="coupon-wrap">
+    <div id="coupon-card">
+
+      <div class="c-top">
+        <div class="c-motifs">🐘 🐟 🐴 🌺 🎊</div>
+        <div class="c-title">পহেলা বৈশাখ ১৪৩৩</div>
+        <div class="c-sub">বাংলা নববর্ষ উৎসব — ১৪ এপ্রিল ২০২৬</div>
+      </div>
+
+      <div class="c-body">
+        <div class="s-label">প্রবেশ কুপন নম্বর</div>
+        <div class="s-num" id="coupon-serial">PB-0000</div>
+
+        <div class="c-grid">
+          <div class="cgi">
+            <span class="ci-lbl">নাম</span>
+            <div class="ci-val" id="c-name">—</div>
+          </div>
+          <div class="cgi">
+            <span class="ci-lbl">মোবাইল</span>
+            <div class="ci-val" id="c-phone">—</div>
+          </div>
+          <div class="cgi">
+            <span class="ci-lbl">শ্রেণি</span>
+            <div class="ci-val" id="c-class">—</div>
+          </div>
+          <div class="cgi">
+            <span class="ci-lbl">রোল নম্বর</span>
+            <div class="ci-val" id="c-roll">—</div>
+          </div>
+          <div class="cgi">
+            <span class="ci-lbl">অংশগ্রহণকারী</span>
+            <div class="ci-val" id="c-guests">—</div>
+          </div>
+          <div class="cgi cgi-full">
+            <span class="ci-lbl">bKash Transaction ID</span>
+            <div class="ci-val" id="c-txn">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-footer">
+        <div class="cf-txt">
+          অনুষ্ঠানে প্রবেশের সময় এই কুপন দেখান<br>
+          🌸 শুভ নববর্ষ ১৪৩৩ · শুভ হোক বৈশাখ!
+        </div>
+        <div class="cf-mot">🐘🐟🐴</div>
+      </div>
+
+    </div>
+
+    <div class="modal-acts">
+      <button class="btn-dl" onclick="downloadCoupon()">⬇️ কুপন ডাউনলোড করুন</button>
+      <button class="btn-cls" onclick="closeModal()">✕ বন্ধ</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  // ══════════════════════════════════════════════════════════════
+  //  ⚙️  CONFIGURATION — এখানে আপনার Apps Script URL বসান
+  // ══════════════════════════════════════════════════════════════
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwx9ClTqMrCsDMMqfVSWqKhziJmAgel1kJqSq-wVcxqAdlaXbE98w4Mcmsqf71O9EGS/exec';
+  //  উপরের লাইনে YOUR_APPS_SCRIPT_URL_HERE এর জায়গায়
+  //  আপনার deploy করা Apps Script Web App URL বসান।
+  //  যেমন: 'https://script.google.com/macros/s/AKfycb.../exec'
+  // ══════════════════════════════════════════════════════════════
+
+  // Check config on load
+  window.addEventListener('load', () => {
+    if (APPS_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbwx9ClTqMrCsDMMqfVSWqKhziJmAgel1kJqSq-wVcxqAdlaXbE98w4Mcmsqf71O9EGS/exec') {
+      document.getElementById('configWarn').style.display = 'block';
+    }
+  });
+
+  // ── Floaters ──
+  const FLOATER_ITEMS = [
+    {e:'🐘',s:32},{e:'🐴',s:26},{e:'🐟',s:28},{e:'🌸',s:22},{e:'🌺',s:20},
+    {e:'🪷',s:22},{e:'🥁',s:24},{e:'🎊',s:22},{e:'🌼',s:20},{e:'💐',s:22},
+    {e:'🐠',s:24},{e:'🦢',s:26},{e:'🎭',s:24},
+  ];
+  const fc = document.getElementById('floaters');
+  for (let i = 0; i < 24; i++) {
+    const it = FLOATER_ITEMS[Math.floor(Math.random() * FLOATER_ITEMS.length)];
+    const d = document.createElement('div');
+    d.className = 'floater';
+    d.textContent = it.e;
+    d.style.left = (Math.random() * 100) + 'vw';
+    d.style.fontSize = (it.s * (0.65 + Math.random() * 0.8)) + 'px';
+    d.style.animationDuration = (10 + Math.random() * 17) + 's';
+    d.style.animationDelay = (Math.random() * 16) + 's';
+    fc.appendChild(d);
+  }
+
+  // ── Serial Generator (local counter, synced with server) ──
+  function getLocalSerial() {
+    let n = parseInt(localStorage.getItem('pb1433_serial') || '0') + 1;
+    localStorage.setItem('pb1433_serial', n);
+    return 'PB-' + String(n).padStart(4, '0');
+  }
+
+  // ── Toast ──
+  function showToast(msg, dur = 3200, color = '#0E5C2F') {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.style.background = color;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), dur);
+  }
+
+  // ── Copy bKash number ──
+  function copyNum() {
+    navigator.clipboard.writeText('01627457836')
+      .then(() => showToast('✅ নম্বর কপি হয়েছে!'))
+      .catch(() => showToast('01627457836 — ম্যানুয়ালি কপি করুন'));
+  }
+
+  // ── Send data to Google Apps Script → Google Sheet + Email ──
+  async function sendToGoogleSheet(data) {
+    if (APPS_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbwx9ClTqMrCsDMMqfVSWqKhziJmAgel1kJqSq-wVcxqAdlaXbE98w4Mcmsqf71O9EGS/exec') {
+      console.warn('Apps Script URL not configured. Skipping sheet submission.');
+      return { success: false, serial: data.serial };
+    }
+
+    const response = await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors', // Google Apps Script requires no-cors
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    // no-cors returns opaque response — we assume success if no error thrown
+    return { success: true, serial: data.serial };
+  }
+
+  // ── Main Submit ──
+  async function submitForm() {
+    const name   = document.getElementById('name').value.trim();
+    const phone  = document.getElementById('phone').value.trim();
+    const email  = document.getElementById('email').value.trim();
+    const cls    = document.getElementById('classname').value;
+    const roll   = document.getElementById('roll').value.trim();
+    const guests = document.getElementById('guests').value;
+    const txnid  = document.getElementById('txnid').value.trim().toUpperCase();
+
+    // Validation
+    if (!name)                   { showToast('❗ নাম লিখুন', 3000, '#8B0000'); return; }
+    if (!phone || phone.length < 11) { showToast('❗ সঠিক মোবাইল নম্বর দিন (১১ ডিজিট)', 3000, '#8B0000'); return; }
+    if (!/^01[3-9]\d{8}$/.test(phone)) { showToast('❗ বাংলাদেশি মোবাইল নম্বর দিন', 3000, '#8B0000'); return; }
+    if (!cls)                    { showToast('❗ শ্রেণি বেছে নিন', 3000, '#8B0000'); return; }
+    if (!roll)                   { showToast('❗ রোল নম্বর লিখুন', 3000, '#8B0000'); return; }
+    if (!txnid)                  { showToast('❗ bKash Transaction ID লিখুন', 3000, '#8B0000'); return; }
+    if (txnid.length < 6)        { showToast('❗ সঠিক Transaction ID দিন', 3000, '#8B0000'); return; }
+
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span> তথ্য সংরক্ষণ হচ্ছে...';
+
+    // Generate serial
+    const serial = getLocalSerial();
+
+    const payload = {
+      serial,
+      name,
+      phone,
+      email: email || '',
+      class: cls,
+      roll,
+      guests,
+      txnid,
+      timestamp: new Date().toLocaleString('bn-BD', { timeZone: 'Asia/Dhaka' }),
+      timestamp_iso: new Date().toISOString()
+    };
+
+    try {
+      await sendToGoogleSheet(payload);
+
+      // Populate coupon
+      document.getElementById('coupon-serial').textContent = serial;
+      document.getElementById('c-name').textContent        = name;
+      document.getElementById('c-phone').textContent       = phone;
+      document.getElementById('c-class').textContent       = cls;
+      document.getElementById('c-roll').textContent        = roll;
+      document.getElementById('c-guests').textContent      = guests;
+      document.getElementById('c-txn').textContent         = txnid;
+
+      btn.disabled = false;
+      btn.innerHTML = '✅ রেজিস্ট্রেশন সম্পন্ন হয়েছে!';
+      btn.style.background = 'linear-gradient(135deg, #0E5C2F, #1E8449)';
+
+      document.getElementById('successBanner').classList.add('show');
+      document.getElementById('couponModal').classList.add('show');
+      showToast('🎊 রেজিস্ট্রেশন সফল! কুপন তৈরি হয়েছে।', 4000);
+
+    } catch (err) {
+      btn.disabled = false;
+      btn.innerHTML = '🎊 রেজিস্ট্রেশন করুন ও কুপন নিন';
+      showToast('❗ সমস্যা হয়েছে, আবার চেষ্টা করুন', 3000, '#8B0000');
+      console.error('Submission error:', err);
+    }
+  }
+
+  function closeModal() {
+    document.getElementById('couponModal').classList.remove('show');
+  }
+
+  async function downloadCoupon() {
+    const card = document.getElementById('coupon-card');
+    const dlBtn = document.querySelector('.btn-dl');
+    dlBtn.textContent = '⏳ তৈরি হচ্ছে...';
+    dlBtn.disabled = true;
+
+    try {
+      const canvas = await html2canvas(card, {
+        scale: 3,
+        backgroundColor: '#FFF9E8',
+        useCORS: true,
+        logging: false,
+        allowTaint: true
+      });
+      const serial = document.getElementById('coupon-serial').textContent;
+      const link = document.createElement('a');
+      link.download = `pohela-boishakh-1433-${serial}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      showToast('✅ কুপন সফলভাবে ডাউনলোড হয়েছে!');
+    } catch (e) {
+      showToast('❗ ডাউনলোডে সমস্যা — আবার চেষ্টা করুন');
+    } finally {
+      dlBtn.textContent = '⬇️ কুপন ডাউনলোড করুন';
+      dlBtn.disabled = false;
+    }
+  }
+
+  // Close modal on backdrop click
+  document.getElementById('couponModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+
+  // Auto uppercase TxID
+  document.getElementById('txnid').addEventListener('input', function() {
+    const pos = this.selectionStart;
+    this.value = this.value.toUpperCase();
+    this.setSelectionRange(pos, pos);
+  });
+</script>
+</body>
+</html>
