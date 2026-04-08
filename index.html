@@ -384,7 +384,6 @@
   .btn-cls { background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.25) !important; }
   .btn-cls:hover { background: rgba(255,255,255,0.22); }
 
-  /* Success state */
   .success-banner {
     background: linear-gradient(135deg, #0E5C2F, #1E8449);
     border-radius: 16px; padding: 16px 20px; margin-top: 14px;
@@ -418,11 +417,10 @@
   }
   .toast.show { transform: translateX(-50%) translateY(0); }
 
-  /* Config warning */
   .config-warn {
     background: rgba(255,140,0,0.15); border: 1.5px solid rgba(255,140,0,0.4);
     border-radius: 12px; padding: 12px 16px; margin-bottom: 16px;
-    font-size: 12px; color: #FFD080; line-height: 1.6; display: none;
+    font-size: 12px; color: #8B4500; line-height: 1.6; display: none;
   }
 
   @media (max-width: 500px) {
@@ -501,9 +499,8 @@
     <div class="form-heading">🎟️ রেজিস্ট্রেশন ফর্ম</div>
     <div class="form-sub">সকল <span style="color:var(--crimson)">*</span> চিহ্নিত তথ্য পূরণ করা আবশ্যক</div>
 
-    <!-- Config Warning (shows if script URL not set) -->
     <div class="config-warn" id="configWarn">
-      ⚠️ Google Apps Script URL সেট করা নেই। <code>APPS_SCRIPT_URL</code> ভেরিয়েবলটি আপডেট করুন।
+      ⚠️ Google Apps Script URL সেট করা নেই। কোডের <code>APPS_SCRIPT_URL</code> ভেরিয়েবলটি আপডেট করুন।
     </div>
 
     <!-- Personal -->
@@ -669,17 +666,16 @@
 
 <script>
   // ══════════════════════════════════════════════════════════════
-  //  ⚙️  CONFIGURATION — এখানে আপনার Apps Script URL বসান
+  //  ⚙️  CONFIGURATION
+  //  আপনার Deploy করা Apps Script URL এখানে বসান
   // ══════════════════════════════════════════════════════════════
-  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwx9ClTqMrCsDMMqfVSWqKhziJmAgel1kJqSq-wVcxqAdlaXbE98w4Mcmsqf71O9EGS/exec';
-  //  উপরের লাইনে YOUR_APPS_SCRIPT_URL_HERE এর জায়গায়
-  //  আপনার deploy করা Apps Script Web App URL বসান।
-  //  যেমন: 'https://script.google.com/macros/s/AKfycb.../exec'
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbybdrRY3s2S5ICr3BTRkF6f5AUSB1kPULNHUmzYgaCKptY1TibBwBe0w0vK3JuaURqq/exec';
   // ══════════════════════════════════════════════════════════════
 
-  // Check config on load
+  // ── Config check on load ──
+  // URL-এ 'YOUR_APPS_SCRIPT_URL_HERE' থাকলেই শুধু warning দেখাবে
   window.addEventListener('load', () => {
-    if (APPS_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbwx9ClTqMrCsDMMqfVSWqKhziJmAgel1kJqSq-wVcxqAdlaXbE98w4Mcmsqf71O9EGS/exec') {
+    if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('YOUR_APPS_SCRIPT_URL_HERE')) {
       document.getElementById('configWarn').style.display = 'block';
     }
   });
@@ -703,7 +699,7 @@
     fc.appendChild(d);
   }
 
-  // ── Serial Generator (local counter, synced with server) ──
+  // ── Serial Generator ──
   function getLocalSerial() {
     let n = parseInt(localStorage.getItem('pb1433_serial') || '0') + 1;
     localStorage.setItem('pb1433_serial', n);
@@ -726,21 +722,22 @@
       .catch(() => showToast('01627457836 — ম্যানুয়ালি কপি করুন'));
   }
 
-  // ── Send data to Google Apps Script → Google Sheet + Email ──
+  // ── Send data to Google Apps Script ──
   async function sendToGoogleSheet(data) {
-    if (APPS_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbwx9ClTqMrCsDMMqfVSWqKhziJmAgel1kJqSq-wVcxqAdlaXbE98w4Mcmsqf71O9EGS/exec') {
-      console.warn('Apps Script URL not configured. Skipping sheet submission.');
+    // URL সেট না থাকলে console-এ warn করে skip করো
+    if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('YOUR_APPS_SCRIPT_URL_HERE')) {
+      console.warn('Apps Script URL কনফিগার করা হয়নি। Sheet submission skip করা হচ্ছে।');
       return { success: false, serial: data.serial };
     }
 
-    const response = await fetch(APPS_SCRIPT_URL, {
+    await fetch(APPS_SCRIPT_URL, {
       method: 'POST',
-      mode: 'no-cors', // Google Apps Script requires no-cors
+      mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     });
 
-    // no-cors returns opaque response — we assume success if no error thrown
+    // no-cors = opaque response, error না হলে সফল ধরা হয়
     return { success: true, serial: data.serial };
   }
 
@@ -755,19 +752,18 @@
     const txnid  = document.getElementById('txnid').value.trim().toUpperCase();
 
     // Validation
-    if (!name)                   { showToast('❗ নাম লিখুন', 3000, '#8B0000'); return; }
-    if (!phone || phone.length < 11) { showToast('❗ সঠিক মোবাইল নম্বর দিন (১১ ডিজিট)', 3000, '#8B0000'); return; }
-    if (!/^01[3-9]\d{8}$/.test(phone)) { showToast('❗ বাংলাদেশি মোবাইল নম্বর দিন', 3000, '#8B0000'); return; }
-    if (!cls)                    { showToast('❗ শ্রেণি বেছে নিন', 3000, '#8B0000'); return; }
-    if (!roll)                   { showToast('❗ রোল নম্বর লিখুন', 3000, '#8B0000'); return; }
-    if (!txnid)                  { showToast('❗ bKash Transaction ID লিখুন', 3000, '#8B0000'); return; }
-    if (txnid.length < 6)        { showToast('❗ সঠিক Transaction ID দিন', 3000, '#8B0000'); return; }
+    if (!name)                              { showToast('❗ নাম লিখুন', 3000, '#8B0000'); return; }
+    if (!phone || phone.length < 11)        { showToast('❗ সঠিক মোবাইল নম্বর দিন (১১ ডিজিট)', 3000, '#8B0000'); return; }
+    if (!/^01[3-9]\d{8}$/.test(phone))     { showToast('❗ বাংলাদেশি মোবাইল নম্বর দিন', 3000, '#8B0000'); return; }
+    if (!cls)                               { showToast('❗ শ্রেণি বেছে নিন', 3000, '#8B0000'); return; }
+    if (!roll)                              { showToast('❗ রোল নম্বর লিখুন', 3000, '#8B0000'); return; }
+    if (!txnid)                             { showToast('❗ bKash Transaction ID লিখুন', 3000, '#8B0000'); return; }
+    if (txnid.length < 6)                   { showToast('❗ সঠিক Transaction ID দিন', 3000, '#8B0000'); return; }
 
     const btn = document.getElementById('submitBtn');
     btn.disabled = true;
     btn.innerHTML = '<span class="spinner"></span> তথ্য সংরক্ষণ হচ্ছে...';
 
-    // Generate serial
     const serial = getLocalSerial();
 
     const payload = {
@@ -786,7 +782,7 @@
     try {
       await sendToGoogleSheet(payload);
 
-      // Populate coupon
+      // কুপনে তথ্য বসাও
       document.getElementById('coupon-serial').textContent = serial;
       document.getElementById('c-name').textContent        = name;
       document.getElementById('c-phone').textContent       = phone;
@@ -816,7 +812,7 @@
   }
 
   async function downloadCoupon() {
-    const card = document.getElementById('coupon-card');
+    const card  = document.getElementById('coupon-card');
     const dlBtn = document.querySelector('.btn-dl');
     dlBtn.textContent = '⏳ তৈরি হচ্ছে...';
     dlBtn.disabled = true;
@@ -843,12 +839,12 @@
     }
   }
 
-  // Close modal on backdrop click
+  // Backdrop click দিয়ে modal বন্ধ
   document.getElementById('couponModal').addEventListener('click', function(e) {
     if (e.target === this) closeModal();
   });
 
-  // Auto uppercase TxID
+  // TxID অটো uppercase
   document.getElementById('txnid').addEventListener('input', function() {
     const pos = this.selectionStart;
     this.value = this.value.toUpperCase();
