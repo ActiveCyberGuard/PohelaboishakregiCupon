@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>পহেলা বৈশাখ ১৪৩৩ - উৎসব রেজিস্ট্রেশন</title>
+<title>পান্তা-ইলিশ উৎসব ২০২৬ — রেজিস্ট্রেশন</title>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700;900&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <style>
@@ -72,50 +72,50 @@
 
   .wrapper {
     position: relative; z-index: 1;
-    max-width: 700px; margin: 0 auto;
-    padding: 28px 16px 70px;
+    max-width: 680px; margin: 0 auto;
+    padding: 24px 14px 60px;
   }
 
-  .hero { text-align: center; padding: 36px 16px 24px; }
+  .hero { text-align: center; padding: 28px 16px 18px; }
 
   .motif-row {
     display: flex; justify-content: center; align-items: center;
-    gap: 4px; flex-wrap: wrap; margin-bottom: 14px;
+    gap: 4px; flex-wrap: wrap; margin-bottom: 10px;
   }
   .motif-item {
-    font-size: 28px;
+    font-size: 24px;
     animation: bounce 2.5s ease-in-out infinite;
     filter: drop-shadow(0 3px 6px rgba(0,0,0,0.4));
     display: inline-block;
   }
   .motif-item:nth-child(1) { animation-delay: 0s; }
-  .motif-item:nth-child(2) { animation-delay: 0.25s; font-size: 22px; }
-  .motif-item:nth-child(3) { animation-delay: 0.5s; font-size: 30px; }
-  .motif-item:nth-child(4) { animation-delay: 0.75s; font-size: 22px; }
-  .motif-item:nth-child(5) { animation-delay: 1s; font-size: 30px; }
-  .motif-item:nth-child(6) { animation-delay: 0.4s; font-size: 22px; }
-  .motif-item:nth-child(7) { animation-delay: 0.8s; font-size: 28px; }
+  .motif-item:nth-child(2) { animation-delay: 0.25s; font-size: 20px; }
+  .motif-item:nth-child(3) { animation-delay: 0.5s; font-size: 26px; }
+  .motif-item:nth-child(4) { animation-delay: 0.75s; font-size: 20px; }
+  .motif-item:nth-child(5) { animation-delay: 1s; font-size: 26px; }
+  .motif-item:nth-child(6) { animation-delay: 0.4s; font-size: 20px; }
+  .motif-item:nth-child(7) { animation-delay: 0.8s; font-size: 24px; }
   @keyframes bounce {
     0%,100% { transform: translateY(0) rotate(-4deg); }
     50%      { transform: translateY(-9px) rotate(4deg); }
   }
 
   .subheadline {
-    color: var(--gold); font-size: 12px; letter-spacing: 5px;
-    text-transform: uppercase; font-weight: 700; margin-bottom: 10px;
+    color: var(--gold); font-size: 11px; letter-spacing: 4px;
+    text-transform: uppercase; font-weight: 700; margin-bottom: 8px;
   }
 
   .main-title {
     font-family: 'Noto Serif Bengali', serif;
     color: var(--bright-gold);
-    font-size: clamp(46px, 13vw, 82px);
+    font-size: clamp(38px, 11vw, 70px);
     font-weight: 900; line-height: 1.05;
     text-shadow:
       0 0 40px rgba(255,215,0,0.6),
       4px 4px 0 #6D0010,
       8px 8px 0 rgba(90,0,14,0.35);
     animation: glow 3.5s ease-in-out infinite alternate;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
   @keyframes glow {
     0%   { text-shadow: 0 0 25px rgba(255,215,0,0.5), 4px 4px 0 #6D0010; }
@@ -126,39 +126,36 @@
     display: inline-flex; align-items: center; gap: 8px;
     background: linear-gradient(135deg, var(--bright-gold), var(--saffron));
     color: var(--deep-red); font-family: 'Noto Serif Bengali', serif;
-    font-size: 19px; font-weight: 900;
-    padding: 6px 24px; border-radius: 40px; margin: 10px 0 16px;
+    font-size: 16px; font-weight: 900;
+    padding: 5px 20px; border-radius: 40px; margin: 8px 0 10px;
     box-shadow: 0 6px 24px rgba(255,215,0,0.45), inset 0 1px 0 rgba(255,255,255,0.3);
   }
 
-  .tagline {
-    color: rgba(255,248,231,0.82); font-size: 15px; line-height: 1.75;
+  .event-name {
+    color: var(--bright-gold);
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 20px; font-weight: 700; margin: 8px 0 4px;
   }
 
-  .culture-strip {
-    display: flex; justify-content: center; align-items: center;
-    gap: 18px; flex-wrap: wrap;
-    margin: 18px 0; padding: 14px 20px;
-    background: rgba(0,0,0,0.22);
-    border-radius: 60px; border: 1px solid rgba(255,215,0,0.2);
+  .organizer {
+    color: rgba(255,248,231,0.75);
+    font-size: 14px; line-height: 1.8; margin-bottom: 4px;
   }
-  .c-item {
-    display: flex; flex-direction: column; align-items: center; gap: 3px;
-    font-size: 10px; color: rgba(255,248,231,0.6);
-    letter-spacing: 1px; text-transform: uppercase;
+
+  .powered {
+    color: rgba(255,215,0,0.55);
+    font-size: 11px; letter-spacing: 1px; margin-top: 4px;
   }
-  .c-item span { font-size: 26px; }
 
   .divider {
-    display: flex; align-items: center; gap: 12px; margin: 20px 0;
+    display: flex; align-items: center; gap: 12px; margin: 16px 0;
   }
   .dline { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-  .dicon { font-size: 18px; }
+  .dicon { font-size: 16px; }
 
-  /* BKASH */
   .bkash-card {
     background: linear-gradient(135deg, #D4106A 0%, #A0004D 50%, #780038 100%);
-    border-radius: 22px; padding: 22px 24px; margin-bottom: 20px;
+    border-radius: 18px; padding: 18px 20px; margin-bottom: 18px;
     border: 2px solid rgba(255,255,255,0.18);
     box-shadow: 0 12px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
     position: relative; overflow: hidden;
@@ -166,7 +163,7 @@
   .bkash-card::before {
     content: '৳';
     position: absolute; right: -8px; bottom: -24px;
-    font-size: 130px; font-weight: 900;
+    font-size: 120px; font-weight: 900;
     color: rgba(255,255,255,0.04);
     font-family: 'Noto Serif Bengali', serif; line-height: 1;
   }
@@ -176,34 +173,27 @@
     font-size: 11px; font-weight: 800;
     padding: 3px 12px; border-radius: 20px;
     letter-spacing: 2px; text-transform: uppercase;
-    display: inline-block; margin-bottom: 10px;
+    display: inline-block; margin-bottom: 8px;
   }
-  .bkash-lbl { color: rgba(255,255,255,0.8); font-size: 13px; margin-bottom: 5px; }
+  .bkash-lbl { color: rgba(255,255,255,0.8); font-size: 12px; margin-bottom: 4px; }
   .bkash-num {
-    color: var(--bright-gold); font-size: 30px; font-weight: 800;
+    color: var(--bright-gold); font-size: 26px; font-weight: 800;
     letter-spacing: 3px; font-family: 'Courier New', monospace;
     text-shadow: 0 0 20px rgba(255,215,0,0.5);
   }
-  .bkash-note { color: rgba(255,255,255,0.6); font-size: 12px; margin-top: 10px; line-height: 1.6; }
+  .bkash-note { color: rgba(255,255,255,0.6); font-size: 11px; margin-top: 8px; line-height: 1.6; }
   .copy-btn {
     background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.35);
-    color: white; padding: 10px 18px; border-radius: 20px;
-    cursor: pointer; font-size: 13px; font-family: 'Hind Siliguri', sans-serif;
+    color: white; padding: 9px 16px; border-radius: 18px;
+    cursor: pointer; font-size: 12px; font-family: 'Hind Siliguri', sans-serif;
     transition: all 0.2s; white-space: nowrap; flex-shrink: 0;
   }
   .copy-btn:hover { background: rgba(255,255,255,0.28); transform: scale(1.04); }
 
-  /* FORM */
   .form-card {
-    background: var(--warm-white); border-radius: 26px; padding: 32px 28px;
+    background: var(--warm-white); border-radius: 22px; padding: 26px 22px;
     box-shadow: 0 24px 70px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,215,0,0.25);
     border-top: 5px solid var(--gold); position: relative; overflow: hidden;
-  }
-  .form-card::before {
-    content: '🐘';
-    position: absolute; top: 6px; right: 14px;
-    font-size: 72px; opacity: 0.05;
-    transform: rotate(8deg) scaleX(-1);
   }
   .form-card::after {
     content: '';
@@ -213,31 +203,34 @@
 
   .form-heading {
     font-family: 'Noto Serif Bengali', serif;
-    color: var(--deep-red); font-size: 24px; font-weight: 800;
-    text-align: center; margin-bottom: 4px;
+    color: var(--deep-red); font-size: 21px; font-weight: 800;
+    text-align: center; margin-bottom: 3px;
   }
-  .form-sub { text-align: center; color: #9A7030; font-size: 13px; margin-bottom: 24px; }
+  .form-sub { text-align: center; color: #9A7030; font-size: 12px; margin-bottom: 20px; }
 
   .sec-label {
-    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
     text-transform: uppercase; color: var(--crimson);
-    border-bottom: 2px solid #F0DDB0; padding-bottom: 6px;
-    margin: 22px 0 14px;
+    border-bottom: 2px solid #F0DDB0; padding-bottom: 5px;
+    margin: 18px 0 12px;
     display: flex; align-items: center; gap: 6px;
   }
 
-  .fg { margin-bottom: 16px; }
+  .fg { margin-bottom: 14px; }
+  .fg.hidden { display: none; }
+
   label {
-    display: block; font-size: 14px; font-weight: 600;
-    color: #3D2000; margin-bottom: 5px;
+    display: block; font-size: 13px; font-weight: 600;
+    color: #3D2000; margin-bottom: 4px;
     font-family: 'Hind Siliguri', sans-serif;
   }
   .req { color: var(--crimson); }
+  .opt { color: #9A7030; font-size: 11px; font-weight: 400; }
 
   input, select {
-    width: 100%; padding: 12px 16px;
-    border: 2px solid #E5D0A0; border-radius: 12px;
-    font-family: 'Hind Siliguri', sans-serif; font-size: 15px;
+    width: 100%; padding: 11px 14px;
+    border: 2px solid #E5D0A0; border-radius: 10px;
+    font-family: 'Hind Siliguri', sans-serif; font-size: 14px;
     color: var(--dark); background: #FFFCF4;
     transition: all 0.25s; outline: none;
     -webkit-appearance: none; appearance: none;
@@ -251,27 +244,27 @@
   select {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B5192A' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat; background-position: right 14px center;
-    padding-right: 42px; cursor: pointer;
+    padding-right: 40px; cursor: pointer;
   }
 
-  .r2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .r2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
   .fee-box {
     background: linear-gradient(135deg, #FFF3E0, #FFE8C0);
-    border: 1.5px solid #FFCC80; border-radius: 14px;
-    padding: 14px 16px; margin: 16px 0;
-    font-size: 13px; color: #6B3800;
+    border: 1.5px solid #FFCC80; border-radius: 12px;
+    padding: 12px 14px; margin: 14px 0;
+    font-size: 12px; color: #6B3800;
     display: flex; align-items: flex-start; gap: 10px; line-height: 1.65;
   }
 
   .submit-btn {
-    width: 100%; padding: 17px;
+    width: 100%; padding: 15px;
     background: linear-gradient(135deg, #B5192A 0%, #7D0E1A 100%);
-    color: white; border: none; border-radius: 16px;
-    font-family: 'Noto Serif Bengali', serif; font-size: 19px; font-weight: 800;
+    color: white; border: none; border-radius: 14px;
+    font-family: 'Noto Serif Bengali', serif; font-size: 17px; font-weight: 800;
     cursor: pointer; transition: all 0.3s;
     box-shadow: 0 8px 28px rgba(181,25,42,0.45);
-    position: relative; overflow: hidden; margin-top: 10px;
+    position: relative; overflow: hidden; margin-top: 8px;
   }
   .submit-btn::before {
     content: '';
@@ -284,17 +277,16 @@
   .submit-btn:active { transform: translateY(0); }
   .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
-  /* COUPON MODAL */
   .modal-overlay {
     display: none; position: fixed; inset: 0;
     background: rgba(5,0,0,0.9); z-index: 200;
     align-items: center; justify-content: center;
-    padding: 20px; backdrop-filter: blur(8px);
+    padding: 16px; backdrop-filter: blur(8px);
   }
   .modal-overlay.show { display: flex; }
 
   .coupon-wrap {
-    max-width: 500px; width: 100%;
+    max-width: 420px; width: 100%;
     animation: popIn 0.45s cubic-bezier(0.175,0.885,0.32,1.275);
   }
   @keyframes popIn {
@@ -303,7 +295,7 @@
   }
 
   #coupon-card {
-    border-radius: 26px; overflow: hidden;
+    border-radius: 20px; overflow: hidden;
     box-shadow: 0 40px 100px rgba(0,0,0,0.6);
     background: linear-gradient(160deg, #FFF9E8 0%, #FFF0BF 100%);
     position: relative;
@@ -312,71 +304,64 @@
     content: '';
     position: absolute; inset: 0; z-index: 0; pointer-events: none;
     background-image: radial-gradient(circle, rgba(181,25,42,0.07) 1.5px, transparent 1.5px);
-    background-size: 24px 24px;
+    background-size: 22px 22px;
   }
 
   .c-top {
     background: linear-gradient(135deg, #B5192A 0%, #7D0E1A 55%, #4A0510 100%);
-    padding: 26px 28px 42px; text-align: center; position: relative; z-index: 1;
+    padding: 20px 22px 34px; text-align: center; position: relative; z-index: 1;
   }
   .c-top::after {
     content: '';
-    position: absolute; bottom: -20px; left: 0; right: 0; height: 40px;
+    position: absolute; bottom: -16px; left: 0; right: 0; height: 32px;
     background: linear-gradient(160deg, #FFF9E8 0%, #FFF0BF 100%);
     clip-path: ellipse(52% 100% at 50% 100%);
   }
-  .c-motifs { font-size: 22px; letter-spacing: 6px; margin-bottom: 8px; }
-  .c-title {
-    font-family: 'Noto Serif Bengali', serif;
-    color: var(--bright-gold); font-size: 28px; font-weight: 900;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
-  }
-  .c-sub { color: rgba(255,248,231,0.75); font-size: 13px; margin-top: 4px; }
 
-  .c-body { padding: 38px 28px 24px; position: relative; z-index: 1; text-align: center; }
+  .iit-logo-area { display: flex; justify-content: center; margin-bottom: 10px; }
+  .iit-logo-area img { height: 38px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+  .iit-text-logo { color: var(--bright-gold); font-size: 13px; font-weight: 900; letter-spacing: 2px; font-family: 'Noto Serif Bengali', serif; }
 
-  .s-label {
-    font-size: 10px; color: #9A7020;
-    letter-spacing: 4px; text-transform: uppercase; font-weight: 700; margin-bottom: 8px;
-  }
+  .c-motifs { font-size: 18px; letter-spacing: 5px; margin-bottom: 6px; }
+  .c-title { font-family: 'Noto Serif Bengali', serif; color: var(--bright-gold); font-size: 22px; font-weight: 900; text-shadow: 0 2px 10px rgba(0,0,0,0.4); }
+  .c-event-name { font-family: 'Noto Serif Bengali', serif; color: var(--bright-gold); font-size: 14px; font-weight: 700; margin-top: 4px; opacity: 0.9; }
+  .c-sub { color: rgba(255,248,231,0.7); font-size: 11px; margin-top: 3px; }
+  .c-organizer { color: rgba(255,248,231,0.65); font-size: 10px; margin-top: 3px; line-height: 1.6; }
+
+  .c-body { padding: 30px 22px 18px; position: relative; z-index: 1; text-align: center; }
+
+  .s-label { font-size: 9px; color: #9A7020; letter-spacing: 4px; text-transform: uppercase; font-weight: 700; margin-bottom: 6px; }
   .s-num {
     font-family: 'Courier New', monospace;
-    font-size: 36px; font-weight: 900; color: #B5192A; letter-spacing: 5px;
+    font-size: 26px; font-weight: 900; color: #B5192A; letter-spacing: 3px;
     background: white; display: inline-block;
-    padding: 10px 30px; border-radius: 14px;
+    padding: 8px 22px; border-radius: 12px;
     border: 2.5px dashed #D4A843;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1); margin-bottom: 22px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1); margin-bottom: 16px;
   }
 
   .c-grid {
     display: grid; grid-template-columns: 1fr 1fr;
-    gap: 12px; text-align: left;
-    border-top: 1.5px dashed #D4A843; padding-top: 18px;
+    gap: 10px; text-align: left;
+    border-top: 1.5px dashed #D4A843; padding-top: 14px;
   }
-  .cgi .ci-lbl {
-    font-size: 9px; color: #9A7020;
-    letter-spacing: 2.5px; text-transform: uppercase; font-weight: 800;
-    display: block; margin-bottom: 3px;
-  }
-  .cgi .ci-val {
-    font-family: 'Noto Serif Bengali', serif;
-    color: #1A0800; font-size: 15px; font-weight: 700;
-  }
+  .cgi .ci-lbl { font-size: 8px; color: #9A7020; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; display: block; margin-bottom: 2px; }
+  .cgi .ci-val { font-family: 'Noto Serif Bengali', serif; color: #1A0800; font-size: 13px; font-weight: 700; }
   .cgi-full { grid-column: 1/-1; }
 
   .c-footer {
     background: linear-gradient(135deg, #0E5C2F, #1E8449);
-    padding: 14px 28px;
+    padding: 12px 22px;
     display: flex; align-items: center; justify-content: space-between;
     position: relative; z-index: 1;
   }
-  .cf-txt { color: rgba(255,255,255,0.75); font-size: 11px; line-height: 1.5; }
-  .cf-mot { font-size: 20px; letter-spacing: 2px; }
+  .cf-txt { color: rgba(255,255,255,0.75); font-size: 10px; line-height: 1.6; }
+  .cf-mot { font-size: 18px; letter-spacing: 2px; }
 
-  .modal-acts { display: flex; gap: 12px; margin-top: 14px; }
+  .modal-acts { display: flex; gap: 10px; margin-top: 12px; }
   .modal-acts button {
-    flex: 1; padding: 14px; border-radius: 14px;
-    font-family: 'Hind Siliguri', sans-serif; font-size: 15px; font-weight: 700;
+    flex: 1; padding: 12px; border-radius: 12px;
+    font-family: 'Hind Siliguri', sans-serif; font-size: 14px; font-weight: 700;
     cursor: pointer; border: none; transition: all 0.25s;
   }
   .btn-dl { background: var(--bright-gold); color: #3D1A00; }
@@ -386,20 +371,20 @@
 
   .success-banner {
     background: linear-gradient(135deg, #0E5C2F, #1E8449);
-    border-radius: 16px; padding: 16px 20px; margin-top: 14px;
-    color: white; font-size: 14px; line-height: 1.7;
+    border-radius: 14px; padding: 14px 18px; margin-top: 12px;
+    color: white; font-size: 13px; line-height: 1.7;
     border: 1px solid rgba(255,255,255,0.2);
     display: none;
   }
   .success-banner.show { display: block; }
 
   .page-footer {
-    text-align: center; margin-top: 32px;
-    color: rgba(255,248,231,0.42); font-size: 12px; line-height: 2;
+    text-align: center; margin-top: 28px;
+    color: rgba(255,248,231,0.42); font-size: 11px; line-height: 2.2;
   }
 
   .spinner {
-    display: inline-block; width: 16px; height: 16px;
+    display: inline-block; width: 14px; height: 14px;
     border: 2px solid rgba(255,255,255,0.35); border-top-color: white;
     border-radius: 50%; animation: spin 0.7s linear infinite;
     vertical-align: middle; margin-right: 6px;
@@ -410,26 +395,19 @@
     position: fixed; bottom: 28px; left: 50%;
     transform: translateX(-50%) translateY(100px);
     background: #0E5C2F; color: white;
-    padding: 12px 26px; border-radius: 40px;
-    font-size: 14px; font-family: 'Hind Siliguri', sans-serif;
+    padding: 11px 24px; border-radius: 40px;
+    font-size: 13px; font-family: 'Hind Siliguri', sans-serif;
     z-index: 999; transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
     box-shadow: 0 10px 30px rgba(0,0,0,0.35); white-space: nowrap;
   }
   .toast.show { transform: translateX(-50%) translateY(0); }
 
-  .config-warn {
-    background: rgba(255,140,0,0.15); border: 1.5px solid rgba(255,140,0,0.4);
-    border-radius: 12px; padding: 12px 16px; margin-bottom: 16px;
-    font-size: 12px; color: #8B4500; line-height: 1.6; display: none;
-  }
-
-  @media (max-width: 500px) {
-    .form-card { padding: 22px 14px; }
+  @media (max-width: 480px) {
+    .form-card { padding: 18px 12px; }
     .r2 { grid-template-columns: 1fr; }
-    .main-title { font-size: 50px; }
-    .s-num { font-size: 26px; letter-spacing: 3px; }
-    .c-body { padding: 30px 16px 18px; }
-    .culture-strip { gap: 10px; }
+    .main-title { font-size: 38px; }
+    .s-num { font-size: 20px; letter-spacing: 2px; }
+    .c-body { padding: 24px 14px 14px; }
     .bkash-inner { flex-direction: column; }
   }
 </style>
@@ -442,7 +420,6 @@
 
 <div class="wrapper">
 
-  <!-- HERO -->
   <div class="hero">
     <div class="motif-row">
       <span class="motif-item">🐘</span>
@@ -456,20 +433,12 @@
     <div class="subheadline">বাংলা নববর্ষ উৎসব ১৪৩৩</div>
     <h1 class="main-title">পহেলা বৈশাখ</h1>
     <div class="year-pill">🗓️ ১৪ এপ্রিল ২০২৬</div>
-    <p class="tagline">
-      এসো হে বৈশাখ, এসো এসো — আনন্দে মাতো সবাই! 🎉<br>
-      ইলিশ মাছে পান্তা ভাত ·
-    </p>
-  </div>
-
-  <!-- Cultural strip -->
-  <div class="culture-strip">
-    <div class="c-item"><span>🐘</span>হাতি</div>
-    <div class="c-item"><span>🐴</span>ঘোড়া</div>
-    <div class="c-item"><span>🐟</span>ইলিশ</div>
-    <div class="c-item"><span>🥁</span>ঢোল</div>
-    <div class="c-item"><span>🌺</span>ফুল</div>
-    <div class="c-item"><span>🎭</span>মুখোশ</div>
+    <div class="event-name">পান্তা-ইলিশ উৎসব</div>
+    <div class="organizer">
+      আয়োজনে : আইআইটি-৫১ ব্যাচ<br>
+      জাহাঙ্গীরনগর বিশ্ববিদ্যালয়, সাভার
+    </div>
+    <div class="powered">Powered By: MD. AL-AMIN</div>
   </div>
 
   <div class="divider">
@@ -478,7 +447,6 @@
     <div class="dline"></div>
   </div>
 
-  <!-- BKASH -->
   <div class="bkash-card">
     <div class="bkash-inner">
       <div>
@@ -494,16 +462,10 @@
     </div>
   </div>
 
-  <!-- FORM -->
   <div class="form-card">
     <div class="form-heading">🎟️ রেজিস্ট্রেশন ফর্ম</div>
     <div class="form-sub">সকল <span style="color:var(--crimson)">*</span> চিহ্নিত তথ্য পূরণ করা আবশ্যক</div>
 
-    <div class="config-warn" id="configWarn">
-      ⚠️ Google Apps Script URL সেট করা নেই। কোডের <code>APPS_SCRIPT_URL</code> ভেরিয়েবলটি আপডেট করুন।
-    </div>
-
-    <!-- Personal -->
     <div class="sec-label">👤 ব্যক্তিগত তথ্য</div>
 
     <div class="fg">
@@ -516,46 +478,33 @@
         <input type="tel" id="phone" placeholder="01XXXXXXXXX">
       </div>
       <div class="fg">
-        <label>ইমেইল</label>
+        <label>ইমেইল <span class="opt"></span></label>
         <input type="email" id="email" placeholder="email@example.com">
       </div>
     </div>
 
-    <!-- Academic -->
-    <div class="sec-label">📚 শিক্ষা প্রতিষ্ঠানের তথ্য</div>
+    <div class="sec-label">📚 শিক্ষা তথ্য</div>
 
-    <div class="r2">
-      <div class="fg">
-        <label>শ্রেণি / ক্লাস <span class="req">*</span></label>
-        <select id="classname">
-          <option value="">ক্লাস বেছে নিন</option>
-          <optgroup label="— মাধ্যমিক —">
-            <option value="ষষ্ঠ শ্রেণি">ষষ্ঠ শ্রেণি (৬ষ্ঠ)</option>
-            <option value="সপ্তম শ্রেণি">সপ্তম শ্রেণি (৭ম)</option>
-            <option value="অষ্টম শ্রেণি">অষ্টম শ্রেণি (৮ম)</option>
-            <option value="নবম শ্রেণি">নবম শ্রেণি (৯ম)</option>
-            <option value="দশম শ্রেণি">দশম শ্রেণি (১০ম)</option>
-          </optgroup>
-          <optgroup label="— উচ্চ মাধ্যমিক —">
-            <option value="একাদশ শ্রেণি">একাদশ শ্রেণি (HSC-১)</option>
-            <option value="দ্বাদশ শ্রেণি">দ্বাদশ শ্রেণি (HSC-২)</option>
-          </optgroup>
-          <optgroup label="— বিশ্ববিদ্যালয় —">
-            <option value="১ম বর্ষ">১ম বর্ষ</option>
-            <option value="২য় বর্ষ">২য় বর্ষ</option>
-            <option value="৩য় বর্ষ">৩য় বর্ষ</option>
-            <option value="৪র্থ বর্ষ">৪র্থ বর্ষ</option>
-            <option value="মাস্টার্স">মাস্টার্স</option>
-          </optgroup>
-          <option value="শিক্ষক / কর্মকর্তা">শিক্ষক / কর্মকর্তা</option>
-          <option value="অভিভাবক">অভিভাবক</option>
-          <option value="অন্যান্য">অন্যান্য</option>
-        </select>
-      </div>
-      <div class="fg">
-        <label>রোল নম্বর <span class="req">*</span></label>
-        <input type="text" id="roll" placeholder="যেমন: ০১, ১৫, ৪২">
-      </div>
+    <div class="fg">
+      <label>পরিচয় / বর্ষ <span class="req">*</span></label>
+      <select id="classname" onchange="handleClassChange()">
+        <option value="">বেছে নিন</option>
+        <optgroup label="— বিশ্ববিদ্যালয় —">
+          <option value="১ম বর্ষ">১ম বর্ষ</option>
+          <option value="২য় বর্ষ">২য় বর্ষ</option>
+          <option value="৩য় বর্ষ">৩য় বর্ষ</option>
+          <option value="৪র্থ বর্ষ">৪র্থ বর্ষ</option>
+          <option value="মাস্টার্স">মাস্টার্স</option>
+        </optgroup>
+        <option value="শিক্ষক / কর্মকর্তা">শিক্ষক / কর্মকর্তা</option>
+        <option value="অন্যান্য">অন্যান্য</option>
+      </select>
+    </div>
+
+    <!-- roll — শুধু student দের জন্য দেখাবে -->
+    <div class="fg" id="rollGroup">
+      <label>রোল নম্বর <span class="req">*</span></label>
+      <input type="text" id="roll" placeholder="যেমন: ০১, ১৫, ৪২">
     </div>
 
     <div class="fg">
@@ -569,20 +518,19 @@
       </select>
     </div>
 
-    <!-- Payment -->
     <div class="sec-label">💳 পেমেন্ট তথ্য</div>
 
     <div class="fg">
-      <label>bKash Transaction ID <span class="req">*</span></label>
-      <input type="text" id="txnid" placeholder="যেমন: 8N7A4B2C1D" style="text-transform:uppercase;">
+      <label>bKash Transaction ID <span class="opt"></span></label>
+      <input type="text" id="txnid" placeholder="না থাকলে ফাঁকা রাখুন" style="text-transform:uppercase;">
     </div>
 
     <div class="fee-box">
-      <span style="font-size:20px">🐟</span>
+      <span style="font-size:18px">🐟</span>
       <span>
         bKash নম্বর <strong>01627-457836</strong>-তে <strong>Send Money</strong> করুন।
-        পেমেন্ট সফল হলে SMS-এর Transaction ID লিখুন।
-        <em>পান্তা-ইলিশের উৎসবে আপনাকে স্বাগতম! 🐘🐴🌺</em>
+        পেমেন্ট করে থাকলে SMS-এর Transaction ID লিখুন।
+        <em>পান্তা-ইলিশের উৎসবে স্বাগতম! 🐘🌺</em>
       </span>
     </div>
 
@@ -591,13 +539,15 @@
     </button>
 
     <div class="success-banner" id="successBanner">
-      ✅ রেজিস্ট্রেশন সফল হয়েছে! আপনার কুপন তৈরি হয়েছে এবং Google Sheet-এ সংরক্ষিত হয়েছে।
+      ✅ রেজিস্ট্রেশন সফল হয়েছে! আপনার কুপন তৈরি হয়েছে এবং সংরক্ষিত হয়েছে।
     </div>
   </div>
 
   <div class="page-footer">
-    🐘 হাতি-ঘোড়ার মেলা &nbsp;·&nbsp; 🐟 পান্তা-ইলিশের ভোজ &nbsp;·&nbsp; 🌸 বৈশাখের আনন্দ<br>
-    যোগাযোগ: <strong style="color:rgba(255,215,0,0.75)">01627-457836</strong>
+    🐘 পান্তা-ইলিশ উৎসব &nbsp;·&nbsp; আইআইটি-৫১ ব্যাচ<br>
+    জাহাঙ্গীরনগর বিশ্ববিদ্যালয়, সাভার<br>
+    যোগাযোগ: <strong style="color:rgba(255,215,0,0.75)">01627-457836</strong><br>
+    <span style="color:rgba(255,215,0,0.4);font-size:10px;">Powered By: MD. AL-AMIN</span>
   </div>
 
 </div>
@@ -608,9 +558,21 @@
     <div id="coupon-card">
 
       <div class="c-top">
+        <div class="iit-logo-area">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Institute_of_Information_Technology%2C_Jahangirnagar_University_logo.svg/320px-Institute_of_Information_Technology%2C_Jahangirnagar_University_logo.svg.png"
+            onerror="this.style.display='none';document.getElementById('iit-text-logo').style.display='block';"
+            alt="IIT JU">
+          <div id="iit-text-logo" style="display:none;" class="iit-text-logo">IIT — JU</div>
+        </div>
         <div class="c-motifs">🐘 🐟 🐴 🌺 🎊</div>
         <div class="c-title">পহেলা বৈশাখ ১৪৩৩</div>
-        <div class="c-sub">বাংলা নববর্ষ উৎসব — ১৪ এপ্রিল ২০২৬</div>
+        <div class="c-event-name">পান্তা-ইলিশ উৎসব</div>
+        <div class="c-sub">১৪ এপ্রিল ২০২৬</div>
+        <div class="c-organizer">
+          আয়োজনে : আইআইটি-৫১ ব্যাচ<br>
+          জাহাঙ্গীরনগর বিশ্ববিদ্যালয়, সাভার
+        </div>
       </div>
 
       <div class="c-body">
@@ -627,10 +589,10 @@
             <div class="ci-val" id="c-phone">—</div>
           </div>
           <div class="cgi">
-            <span class="ci-lbl">শ্রেণি</span>
+            <span class="ci-lbl">পরিচয়</span>
             <div class="ci-val" id="c-class">—</div>
           </div>
-          <div class="cgi">
+          <div class="cgi" id="c-roll-group">
             <span class="ci-lbl">রোল নম্বর</span>
             <div class="ci-val" id="c-roll">—</div>
           </div>
@@ -638,7 +600,7 @@
             <span class="ci-lbl">অংশগ্রহণকারী</span>
             <div class="ci-val" id="c-guests">—</div>
           </div>
-          <div class="cgi cgi-full">
+          <div class="cgi cgi-full" id="c-txn-group">
             <span class="ci-lbl">bKash Transaction ID</span>
             <div class="ci-val" id="c-txn">—</div>
           </div>
@@ -648,7 +610,7 @@
       <div class="c-footer">
         <div class="cf-txt">
           অনুষ্ঠানে প্রবেশের সময় এই কুপন দেখান<br>
-          🌸 শুভ নববর্ষ ১৪৩৩ · শুভ হোক বৈশাখ!
+          🌸 শুভ নববর্ষ ১৪৩৩ · Powered By: MD. AL-AMIN
         </div>
         <div class="cf-mot">🐘🐟🐴</div>
       </div>
@@ -665,29 +627,38 @@
 <div class="toast" id="toast"></div>
 
 <script>
-  // ══════════════════════════════════════════════════════════════
-  //  ⚙️  CONFIGURATION
-  //  আপনার Deploy করা Apps Script URL এখানে বসান
-  // ══════════════════════════════════════════════════════════════
+  // ══════════════════════════════════════════════════
+  //  ⚙️ CONFIGURATION — Apps Script URL এখানে বসান
+  // ══════════════════════════════════════════════════
   const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbybdrRY3s2S5ICr3BTRkF6f5AUSB1kPULNHUmzYgaCKptY1TibBwBe0w0vK3JuaURqq/exec';
-  // ══════════════════════════════════════════════════════════════
+  // ══════════════════════════════════════════════════
 
-  // ── Config check on load ──
-  // URL-এ 'YOUR_APPS_SCRIPT_URL_HERE' থাকলেই শুধু warning দেখাবে
-  window.addEventListener('load', () => {
-    if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('YOUR_APPS_SCRIPT_URL_HERE')) {
-      document.getElementById('configWarn').style.display = 'block';
+  // শিক্ষক / অন্যান্য হলে roll লাগবে না
+  const NO_ROLL_NEEDED = ['শিক্ষক / কর্মকর্তা', 'অন্যান্য'];
+
+  function isStudent(val) {
+    return val && !NO_ROLL_NEEDED.includes(val);
+  }
+
+  function handleClassChange() {
+    const cls = document.getElementById('classname').value;
+    const rollGroup = document.getElementById('rollGroup');
+    if (isStudent(cls)) {
+      rollGroup.classList.remove('hidden');
+    } else {
+      rollGroup.classList.add('hidden');
+      document.getElementById('roll').value = '';
     }
-  });
+  }
 
   // ── Floaters ──
   const FLOATER_ITEMS = [
-    {e:'🐘',s:32},{e:'🐴',s:26},{e:'🐟',s:28},{e:'🌸',s:22},{e:'🌺',s:20},
-    {e:'🪷',s:22},{e:'🥁',s:24},{e:'🎊',s:22},{e:'🌼',s:20},{e:'💐',s:22},
-    {e:'🐠',s:24},{e:'🦢',s:26},{e:'🎭',s:24},
+    {e:'🐘',s:28},{e:'🐴',s:22},{e:'🐟',s:24},{e:'🌸',s:20},{e:'🌺',s:18},
+    {e:'🪷',s:20},{e:'🥁',s:22},{e:'🎊',s:20},{e:'🌼',s:18},{e:'💐',s:20},
+    {e:'🐠',s:22},{e:'🦢',s:24},{e:'🎭',s:22},
   ];
   const fc = document.getElementById('floaters');
-  for (let i = 0; i < 24; i++) {
+  for (let i = 0; i < 20; i++) {
     const it = FLOATER_ITEMS[Math.floor(Math.random() * FLOATER_ITEMS.length)];
     const d = document.createElement('div');
     d.className = 'floater';
@@ -699,14 +670,15 @@
     fc.appendChild(d);
   }
 
-  // ── Serial Generator ──
-  function getLocalSerial() {
-    let n = parseInt(localStorage.getItem('pb1433_serial') || '0') + 1;
-    localStorage.setItem('pb1433_serial', n);
-    return 'PB-' + String(n).padStart(4, '0');
+  // ── Unique Serial ──
+  function generateUniqueSerial() {
+    const key = 'pb1433_counter';
+    const n = parseInt(localStorage.getItem(key) || '0') + 1;
+    localStorage.setItem(key, String(n));
+    const tsSuffix = Date.now().toString(36).toUpperCase().slice(-4);
+    return 'PB-' + String(n).padStart(4, '0') + '-' + tsSuffix;
   }
 
-  // ── Toast ──
   function showToast(msg, dur = 3200, color = '#0E5C2F') {
     const t = document.getElementById('toast');
     t.textContent = msg;
@@ -715,33 +687,25 @@
     setTimeout(() => t.classList.remove('show'), dur);
   }
 
-  // ── Copy bKash number ──
   function copyNum() {
     navigator.clipboard.writeText('01627457836')
       .then(() => showToast('✅ নম্বর কপি হয়েছে!'))
       .catch(() => showToast('01627457836 — ম্যানুয়ালি কপি করুন'));
   }
 
-  // ── Send data to Google Apps Script ──
   async function sendToGoogleSheet(data) {
-    // URL সেট না থাকলে console-এ warn করে skip করো
     if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('YOUR_APPS_SCRIPT_URL_HERE')) {
-      console.warn('Apps Script URL কনফিগার করা হয়নি। Sheet submission skip করা হচ্ছে।');
-      return { success: false, serial: data.serial };
+      console.warn('Apps Script URL কনফিগার করা হয়নি।');
+      return;
     }
-
     await fetch(APPS_SCRIPT_URL, {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     });
-
-    // no-cors = opaque response, error না হলে সফল ধরা হয়
-    return { success: true, serial: data.serial };
   }
 
-  // ── Main Submit ──
   async function submitForm() {
     const name   = document.getElementById('name').value.trim();
     const phone  = document.getElementById('phone').value.trim();
@@ -751,30 +715,29 @@
     const guests = document.getElementById('guests').value;
     const txnid  = document.getElementById('txnid').value.trim().toUpperCase();
 
-    // Validation
-    if (!name)                              { showToast('❗ নাম লিখুন', 3000, '#8B0000'); return; }
-    if (!phone || phone.length < 11)        { showToast('❗ সঠিক মোবাইল নম্বর দিন (১১ ডিজিট)', 3000, '#8B0000'); return; }
-    if (!/^01[3-9]\d{8}$/.test(phone))     { showToast('❗ বাংলাদেশি মোবাইল নম্বর দিন', 3000, '#8B0000'); return; }
-    if (!cls)                               { showToast('❗ শ্রেণি বেছে নিন', 3000, '#8B0000'); return; }
-    if (!roll)                              { showToast('❗ রোল নম্বর লিখুন', 3000, '#8B0000'); return; }
-    if (!txnid)                             { showToast('❗ bKash Transaction ID লিখুন', 3000, '#8B0000'); return; }
-    if (txnid.length < 6)                   { showToast('❗ সঠিক Transaction ID দিন', 3000, '#8B0000'); return; }
+    if (!name)                          { showToast('❗ নাম লিখুন', 3000, '#8B0000'); return; }
+    if (!phone || phone.length < 11)    { showToast('❗ সঠিক মোবাইল নম্বর দিন (১১ ডিজিট)', 3000, '#8B0000'); return; }
+    if (!/^01[3-9]\d{8}$/.test(phone)) { showToast('❗ বাংলাদেশি মোবাইল নম্বর দিন', 3000, '#8B0000'); return; }
+    if (!cls)                           { showToast('❗ পরিচয় / বর্ষ বেছে নিন', 3000, '#8B0000'); return; }
+    if (isStudent(cls) && !roll)        { showToast('❗ রোল নম্বর লিখুন', 3000, '#8B0000'); return; }
+    // TxID — optional, কিন্তু দিলে min 6 char
+    if (txnid && txnid.length < 6)      { showToast('❗ সঠিক Transaction ID দিন', 3000, '#8B0000'); return; }
 
     const btn = document.getElementById('submitBtn');
     btn.disabled = true;
     btn.innerHTML = '<span class="spinner"></span> তথ্য সংরক্ষণ হচ্ছে...';
 
-    const serial = getLocalSerial();
+    const serial = generateUniqueSerial();
 
     const payload = {
       serial,
       name,
       phone,
-      email: email || '',
-      class: cls,
-      roll,
+      email:     email || '',
+      class:     cls,
+      roll:      roll  || '—',
       guests,
-      txnid,
+      txnid:     txnid || '—',
       timestamp: new Date().toLocaleString('bn-BD', { timeZone: 'Asia/Dhaka' }),
       timestamp_iso: new Date().toISOString()
     };
@@ -782,14 +745,29 @@
     try {
       await sendToGoogleSheet(payload);
 
-      // কুপনে তথ্য বসাও
       document.getElementById('coupon-serial').textContent = serial;
       document.getElementById('c-name').textContent        = name;
       document.getElementById('c-phone').textContent       = phone;
       document.getElementById('c-class').textContent       = cls;
-      document.getElementById('c-roll').textContent        = roll;
       document.getElementById('c-guests').textContent      = guests;
-      document.getElementById('c-txn').textContent         = txnid;
+
+      // roll: student হলে দেখাও
+      const rollGrp = document.getElementById('c-roll-group');
+      if (isStudent(cls) && roll) {
+        rollGrp.style.display = '';
+        document.getElementById('c-roll').textContent = roll;
+      } else {
+        rollGrp.style.display = 'none';
+      }
+
+      // TxID: দিলে দেখাও
+      const txnGrp = document.getElementById('c-txn-group');
+      if (txnid) {
+        txnGrp.style.display = '';
+        document.getElementById('c-txn').textContent = txnid;
+      } else {
+        txnGrp.style.display = 'none';
+      }
 
       btn.disabled = false;
       btn.innerHTML = '✅ রেজিস্ট্রেশন সম্পন্ন হয়েছে!';
@@ -803,7 +781,7 @@
       btn.disabled = false;
       btn.innerHTML = '🎊 রেজিস্ট্রেশন করুন ও কুপন নিন';
       showToast('❗ সমস্যা হয়েছে, আবার চেষ্টা করুন', 3000, '#8B0000');
-      console.error('Submission error:', err);
+      console.error(err);
     }
   }
 
@@ -816,18 +794,14 @@
     const dlBtn = document.querySelector('.btn-dl');
     dlBtn.textContent = '⏳ তৈরি হচ্ছে...';
     dlBtn.disabled = true;
-
     try {
       const canvas = await html2canvas(card, {
-        scale: 3,
-        backgroundColor: '#FFF9E8',
-        useCORS: true,
-        logging: false,
-        allowTaint: true
+        scale: 3, backgroundColor: '#FFF9E8',
+        useCORS: true, logging: false, allowTaint: true
       });
       const serial = document.getElementById('coupon-serial').textContent;
       const link = document.createElement('a');
-      link.download = `pohela-boishakh-1433-${serial}.png`;
+      link.download = `panta-ilish-2026-${serial}.png`;
       link.href = canvas.toDataURL('image/png');
       link.click();
       showToast('✅ কুপন সফলভাবে ডাউনলোড হয়েছে!');
@@ -839,12 +813,10 @@
     }
   }
 
-  // Backdrop click দিয়ে modal বন্ধ
   document.getElementById('couponModal').addEventListener('click', function(e) {
     if (e.target === this) closeModal();
   });
 
-  // TxID অটো uppercase
   document.getElementById('txnid').addEventListener('input', function() {
     const pos = this.selectionStart;
     this.value = this.value.toUpperCase();
