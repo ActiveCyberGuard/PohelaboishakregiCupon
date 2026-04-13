@@ -142,11 +142,6 @@
     font-size: 14px; line-height: 1.8; margin-bottom: 4px;
   }
 
-  .powered {
-    color: rgba(255,215,0,0.55);
-    font-size: 11px; letter-spacing: 1px; margin-top: 4px;
-  }
-
   .divider {
     display: flex; align-items: center; gap: 12px; margin: 16px 0;
   }
@@ -438,7 +433,6 @@
       আয়োজনে : আইআইটি-৫১ ব্যাচ<br>
       জাহাঙ্গীরনগর বিশ্ববিদ্যালয়, সাভার
     </div>
-    
   </div>
 
   <div class="divider">
@@ -501,7 +495,6 @@
       </select>
     </div>
 
-    <!-- roll — শুধু student দের জন্য দেখাবে -->
     <div class="fg" id="rollGroup">
       <label>রোল নম্বর <span class="req">*</span></label>
       <input type="text" id="roll" placeholder="যেমন: ০১, ১৫, ৪২">
@@ -547,7 +540,7 @@
     🐘 পান্তা-ইলিশ উৎসব &nbsp;·&nbsp; আইআইটি-৫১ ব্যাচ<br>
     জাহাঙ্গীরনগর বিশ্ববিদ্যালয়, সাভার<br>
     যোগাযোগ: <strong style="color:rgba(255,215,0,0.75)">01627-457836</strong><br>
-    <span style="color:rgba(255,215,0,0.4);font-size:10px;"><a href="https://activecyberguard.github.io/portfolio/">Powered By: MD. AL-AMIN</a> </span>
+    <span style="color:rgba(255,215,0,0.4);font-size:10px;"><a href="https://activecyberguard.github.io/portfolio/">Powered By: MD. AL-AMIN</a></span>
   </div>
 
 </div>
@@ -610,7 +603,7 @@
       <div class="c-footer">
         <div class="cf-txt">
           অনুষ্ঠানে প্রবেশের সময় এই কুপন দেখান<br>
-          🌸 শুভ নববর্ষ ১৪৩৩ · <a href="https://activecyberguard.github.io/portfolio/">Powered By: MD. AL-AMIN</a> 
+          🌸 শুভ নববর্ষ ১৪৩৩ · <a href="https://activecyberguard.github.io/portfolio/">Powered By: MD. AL-AMIN</a>
         </div>
         <div class="cf-mot">🐘🐟🐴</div>
       </div>
@@ -633,7 +626,6 @@
   const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwfiwMsM3kgftR5BnBmncHQolkohXjifHJoWHCZTYeXCvUuMvM6SIJ-FnclXAeYWM-NmQ/exec';
   // ══════════════════════════════════════════════════
 
-  // শিক্ষক / অন্যান্য হলে roll লাগবে না
   const NO_ROLL_NEEDED = ['শিক্ষক / কর্মকর্তা', 'অন্যান্য'];
 
   function isStudent(val) {
@@ -693,17 +685,34 @@
       .catch(() => showToast('01627457836 — ম্যানুয়ালি কপি করুন'));
   }
 
+  // ════════════════════════════════════════════════════════
+  //  ✅ FIX: Google Sheet-এ data পাঠানোর সঠিক ফাংশন
+  //  পুরানো কোডে condition উল্টো ছিল — URL থাকলেও
+  //  includes() check true হয়ে return করে দিচ্ছিল।
+  //  এখন: URL না থাকলে warn করে, থাকলে fetch করে।
+  // ════════════════════════════════════════════════════════
   async function sendToGoogleSheet(data) {
-    if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('https://script.google.com/macros/s/AKfycbwfiwMsM3kgftR5BnBmncHQolkohXjifHJoWHCZTYeXCvUuMvM6SIJ-FnclXAeYWM-NmQ/exec')) {
-      console.warn('Apps Script URL কনফিগার করা হয়নি।');
-      return;
+    if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.trim() === '') {
+      console.warn('⚠️ Apps Script URL সেট করা হয়নি।');
+      return { success: false, reason: 'no_url' };
     }
-    await fetch(APPS_SCRIPT_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
+
+    // Google Apps Script-এ no-cors দিয়ে POST পাঠাতে হয়
+    // কারণ Apps Script CORS header দেয় না।
+    // তাই response পড়া যাবে না — কিন্তু data পৌঁছাবে।
+    try {
+      await fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' }, // no-cors এ application/json blocked
+        body: JSON.stringify(data)
+      });
+      console.log('✅ Data Google Sheet-এ পাঠানো হয়েছে।');
+      return { success: true };
+    } catch (err) {
+      console.error('❌ Fetch error:', err);
+      throw err;
+    }
   }
 
   async function submitForm() {
@@ -720,7 +729,6 @@
     if (!/^01[3-9]\d{8}$/.test(phone)) { showToast('❗ বাংলাদেশি মোবাইল নম্বর দিন', 3000, '#8B0000'); return; }
     if (!cls)                           { showToast('❗ পরিচয় / বর্ষ বেছে নিন', 3000, '#8B0000'); return; }
     if (isStudent(cls) && !roll)        { showToast('❗ রোল নম্বর লিখুন', 3000, '#8B0000'); return; }
-    // TxID — optional, কিন্তু দিলে min 6 char
     if (txnid && txnid.length < 6)      { showToast('❗ সঠিক Transaction ID দিন', 3000, '#8B0000'); return; }
 
     const btn = document.getElementById('submitBtn');
@@ -745,13 +753,13 @@
     try {
       await sendToGoogleSheet(payload);
 
+      // কুপন তথ্য সেট করুন
       document.getElementById('coupon-serial').textContent = serial;
       document.getElementById('c-name').textContent        = name;
       document.getElementById('c-phone').textContent       = phone;
       document.getElementById('c-class').textContent       = cls;
       document.getElementById('c-guests').textContent      = guests;
 
-      // roll: student হলে দেখাও
       const rollGrp = document.getElementById('c-roll-group');
       if (isStudent(cls) && roll) {
         rollGrp.style.display = '';
@@ -760,7 +768,6 @@
         rollGrp.style.display = 'none';
       }
 
-      // TxID: দিলে দেখাও
       const txnGrp = document.getElementById('c-txn-group');
       if (txnid) {
         txnGrp.style.display = '';
